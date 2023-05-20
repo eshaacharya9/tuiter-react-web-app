@@ -15,7 +15,7 @@
     font-size: 14px;
     cursor: pointer;
     margin-top: 33px;
-    margin-right: 270px;
+    margin-right: 735px;
   }
 
   .wd-profile-image {
@@ -45,7 +45,27 @@
     top: -17px;
     width: 16px;
   }
+  .wd-news1-tuit-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color:#999;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 89px;
+    margin-right: 735px;
+  }
 
+  .wd-news2-tuit-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color:#999;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 630px;
+    margin-right: 735px;
+  }
   .wd-specifics {
     color: rgb(159, 159, 159);
     position: relative;
@@ -62,8 +82,12 @@
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 8px;
-    padding: 12px;
+    padding: 0px;
     margin-bottom: 12px;
+    overflow: hidden;
+    width: 580px;
+    margin-left: 70px;
+    cursor: pointer;
   }
   
   .tuit-upper {
@@ -74,12 +98,89 @@
   .tuit-lower {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    padding-left: 5px;
   }
   
   .tuit img {
-    border-radius: 50%;
+    width: 100%;
+  height: auto;
+    border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: -1px;
   }
   
   .tuit p {
     color: black;
+  }
+
+  .grey-text {
+    color: rgb(154, 154, 154);
+  }
+
+  .tuit-actions {
+    margin-top: 10px; /* Adjust spacing as needed */
+    margin-left: 80px;
+  }
+  
+  .tuit-actions span {
+    margin-right: 70px; /* Adjust spacing as needed */
+  }
+  
+  .tuit-actions .comment-icon,
+  .tuit-actions .retweet-icon,
+  .tuit-actions .like-icon,
+  .tuit-actions .stats-icon,
+  .tuit-actions .share-icon {
+    display: inline-block;
+  }
+  
+  .tuit-actions .comment-icon {
+    color: grey;
+    margin-right: -1px;
+  }
+  .tuit-actions .comment-count {
+    color: grey;
+  }
+  
+  .tuit-actions .retweet-icon {
+    margin-right: -1px;
+    color: grey;
+  }
+  .tuit-actions .retweet-count {
+    color: grey;
+  }
+  
+  .tuit-actions .like-icon {
+    margin-right: -1px;
+    color: grey;
+  }
+  .tuit-actions .like-count {
+
+    color: grey;
+  }
+  
+  .tuit-actions .stats-icon {
+    margin-right: -1px;
+    color: grey;
+  }
+  .tuit-actions .stats-count {
+    
+
+    color: grey;
+  }
+  
+  .tuit-actions .stats-count {
+    color: grey;
+  }
+  .tuit-actions .share-icon {
+    margin-right: -1px;
+
+    color: grey;
+  }
+  .tuit-actions .like-icon .fa-heart.liked {
+    color: red;
   }
