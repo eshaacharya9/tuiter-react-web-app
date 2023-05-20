@@ -1,0 +1,85 @@
+.wd-back-arrow {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.wd-bookmarks{
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.wd-tuit-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 33px;
+    margin-right: 270px;
+  }
+
+  .wd-profile-image {
+    width: 40px; /* Adjust the size of the image as needed */
+    height: 40px;
+    border-radius: 50%; /* Make the image circular */
+    margin-left: 25px; /* Adjust the value to create spacing between the text and image */
+    margin-top: 30px;
+  }
+
+  .wd-profile-name {
+    font-weight: bold;
+    margin-left: 5px;
+    position: relative;
+    top: -20px;
+  }
+
+  .wd-flag {
+    border-radius: 3px;
+    width: 20px;
+    height: auto;
+    position: relative;
+    top: -18px;
+  }
+  .wd-verified-icon {
+    position: relative;
+    top: -17px;
+    width: 16px;
+  }
+
+  .wd-specifics {
+    color: rgb(159, 159, 159);
+    position: relative;
+    top: -18px;
+  }
+
+  .wd-details {
+    position: relative;
+    top:-20px;
+    left: 73px;
+  }
+
+  .tuit {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .tuit-upper {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .tuit-lower {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .tuit img {
+    border-radius: 50%;
+  }
+  
+  .tuit p {
+    color: black;
+  }
