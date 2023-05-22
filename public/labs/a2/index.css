@@ -222,4 +222,12 @@ p#id-selector-2 {
     float: left;
 }
  
-  
+.btn-primary.override-bs {
+    border-width: 20px;
+    border-radius: 30px;
+    background-color: #fd0de9;
+    border-color: #f1fd0d;
+    border-style: groove;
+    font-size: 1em;
+    font-weight: bolder;
+}
