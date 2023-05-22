@@ -61,6 +61,7 @@
   .wd-tab-text.selected {
     color: black;
     font-weight: bold;
+    cursor: pointer;
   }
   .wd-tab.active .wd-underline {
     border-bottom: 5px solid #0062ffb5;
@@ -105,8 +106,11 @@
 
   .wd-tuit-list {
     list-style-type: none;
+    position: relative;
     margin: 0;
     padding: 0;
+    top: 110px;
+    
   }
   
   .wd-tuit-item {
@@ -145,9 +149,9 @@
   }
 
   .wd-live-label {
-    position: absolute;
-    left: 215px;
-    bottom: 98px;
+    position: relative;
+    left: -270px;
+    bottom: -610px;
     background-color: #FF0000;
     color: #FFFFFF;
     padding: 5px;
@@ -157,8 +161,13 @@
   }
 
   .wd-event-label {
-    position: absolute;
-    left: 170px;
-    bottom: 101px;
+    position: relative;
+    left: -270px;
+    bottom: -610px;
     color:white;
   }
+
+
+
+
+

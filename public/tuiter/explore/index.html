@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Explore</title>
+   <link href="index.css" rel="stylesheet"/>
+   <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+   <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+   
+</head>
+<body>
+    <div class="container pt-1">
+        <div class="row">
+            <div class="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+                <!-- First column navigation sidebar with home, explore, notifications, messages, bookmarks, lists, profile, more..-->
+                <div class="list-group">
+                        <div class="fab fa-twitter fa-1x text-black list-group-item list-group-item-action"></div>
+                        
+                        <a href="#" class="list-group-item list-group-item-action">
+                        <div class="fa fa-home text-black"></div>
+                        <span class="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline text-wrap">Home</span></a>
+                    
+                        <a href="#" class="list-group-item list-group-item-action active">
+                        <div class="fa fa-hashtag"></div>
+                        <span class="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Explore</span></a>
+
+                        <a href="#" class="list-group-item list-group-item-action">
+                        <div class="fa fa-bell text-black"></div>
+                        <span class="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Notifications</span></a>
+                
+                        <a href="#" class="list-group-item list-group-item-action">
+                        <div class="fa fa-envelope text-black"></div>
+                        <span class="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Messages</span></a>
+                
+                        <a href="#" class="list-group-item list-group-item-action">
+                        <div class="fa fa-bookmark text-black"></div>
+                        <span class="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Bookmarks</span></a>
+                    
+                        <a href="#" class="list-group-item list-group-item-action">
+                        <div class="fa fa-list text-black"></div>
+                        <span class="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Lists</span></a>
+       
+                        <a href="#" class="list-group-item list-group-item-action">
+                        <div class="fa fa-user text-black"></div>
+                        <span class="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Profile</span></a>
+                
+                        <a href="#" class="list-group-item list-group-item-action">
+                        <div class="fa-stack" style="font-size: 8px;">
+                            <div class="fas fa-circle fa-stack-2x"></div>
+                            <div class="fa fa-ellipsis-h fa-stack-1x text-white"></div>
+                        </div>
+                        <span class="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">More</span></a>
+                </div>
+
+
+                <!--Tuit button below the first column-->
+                <button class="btn btn-primary w-100 mt-1 rounded-pill col-lg-5">
+                    Tuit
+                </button>
+            </div>
+            <!--fist column done-->
+
+            <!-- now middle section content-->
+            <div class="col-6 col-sm-8 col-md-10 col-lg-6 col-xl-6 col-xxl-6">
+
+
+                <div class="row">
+                    <!--search input field-->
+                    <div class="col-10 col-sm-3 col-md-6 col-lg-8 col-xl-10 col-xxl-10">
+                        <div class="position-relative">
+                            <span class="fa fa-search position-absolute m-2 m-sm-2 m-lg-3 m-xl-3 m-xxl-3"></span>
+                            <input class="ps-5 form-control rounded-pill " placeholder="Search Tuiter"/>
+                        </div>
+                    </div>
+
+                    <!-- settings icon besides search icon-->
+                    <div class="col-2">
+                        <span class="fa fa-cog fa-2x text-primary mt-1"  style="font-size: 25px;"></span>
+                    </div>
+                </div>
+
+                <!--now the middle section nav tabs-->
+
+                <ul class="nav nav-tabs mt-1">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="for-you.html">For you</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trending.html">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sports.html">Sports</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-none d-md-inline d-lg-inline d-xl-inline d-xxl-inline">
+                        <a class="nav-link" href="entertainment.html">Entertainment</a>
+                    </li>
+                </ul>
+
+                <!--now inside for you.hyml main content display-->
+                <!--space image-->
+                <div class="position-relative">
+                    <img src="../../images/space.jpg" width="100%"/>
+                    <h1 class="position-absolute bottom-0 left-0 text-white m-lg-3"> SpaceX's Starship</h1>
+                </div>
+
+                <!--content below image-->
+                <ul class="list-group wd-decrease-font">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="text-secondary text-wrap">
+                                    Web Development
+                                </div>
+                                <div class="fw-bolder text-wrap">
+                                    ReactJS <span class="fa fa-check-circle"></span>
+                                    <span class="text-secondary text-wrap">- 2h</span>
+                                </div>
+                                <div class="fw-bolder text-wrap">
+                                    React.js is a component based front end library that makes it very easy to build
+                                    Single Page Applications or SPAs
+                                </div>
+                            </div>
+                            <div class="col-4 wd-img-responsive">
+                                <img class="float-end" src="../../images/reactjs.jpg" height="100px">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="fw-bolder text-wrap">
+                                    JavaScript <span class="fa fa-check-circle"></span>
+                                    <span class="text-secondary text-wrap">- 2h</span>
+                                </div>
+                                <div class="fw-bolder text-wrap">
+                                    JavaScript is programming language that can run on browsers as well as desktops
+                                </div>
+                                <span class="text-secondary text-wrap">123K Tuits</span>
+                            </div>
+                            <div class="col-4">
+                                <img class="float-end" src="../../images/javascript.jpg" height="100px">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="text-secondary text-wrap">
+                                    Web Development
+                                </div>
+                                <div class="fw-bolder text-wrap">
+                                    jQuery
+                                </div>
+                                <span class="text-secondary text-wrap">123K Tuits</span>
+                            </div>
+                            <div class="col-4">
+                                <img class="float-end" src="../../images/jquery.png" height="100px">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="text-secondary text-wrap">
+                                    Web Development
+                                </div>
+                                <div class="fw-bolder text-wrap">
+                                    NodeJS <span class="fa fa-check-circle"></span>
+                                    <span class="text-secondary text-wrap">- 2h</span>
+                                </div>
+                                <span class="text-secondary text-wrap">123K Tuits</span>
+                            </div>
+                            <div class="col-4">
+                                <img class="float-end" src="../../images/nodejs.png" height="100px">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--middle section finished here-->
+
+            <!--right side coulmn -->
+            <div class="col-4 d-none d-sm-none d-md-none d-lg-inline d-xl-inline d-xxl-inline">
+            <div class="list-group">
+                <div class="fw-bold list-group-item list-group-item-action text-wrap">Who to follow</div>
+
+                <div class="list-group-item list-group-item-action col-4">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../../images/java.jpg" class="w-75 h-75 rounded-circle">
+                        </div>
+                        <div class="col-6">
+                            <span class="fw-bold text-wrap">Java <span class="fa fa-check-circle"></span></span><br>
+                            <span class="text-secondary text-wrap">@Java</span>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn-primary rounded-pill float-end mt-2">Follow</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item list-group-item-action col-4">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../../images/relativity.jpg" class="w-75 h-75 rounded-circle">
+                        </div>
+                        <div class="col-6">
+                            <span class="fw-bold text-wrap">Relativity Space <span class="fa fa-check-circle"></span></span><br>
+                            <span class="text-secondary text-wrap">@relativityspace</span>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn-primary rounded-pill float-end mt-2">Follow</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item list-group-item-action col-4">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../../images/virgin.svg" class="w-75 h-75 rounded-circle">
+                        </div>
+                        <div class="col-6">
+                            <span class="fw-bold text-wrap">Virgin Galactic <span class="fa fa-check-circle"></span></span><br>
+                            <span class="text-secondary text-wrap">@virgingalactic</span>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn-primary rounded-pill float-end mt-2">Follow</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item list-group-item-action col-4">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../../images/nasa.png" class="w-75 h-75 rounded-circle">
+                        </div>
+                        <div class="col-6">
+                            <span class="fw-bold text-wrap">NASA <span class="fa fa-check-circle"></span></span><br>
+                            <span class="text-secondary text-wrap">@NASA</span>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn-primary rounded-pill float-end mt-2">Follow</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list-group-item list-group-item-action col-4">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../../images/tesla.png" class="w-75 h-75 rounded-circle">
+                        </div>
+                        <div class="col-6">
+                            <span class="fw-bold text-wrap">Tesla <span class="fa fa-check-circle"></span></span><br>
+                            <span class="text-secondary text-wrap">@Tesla</span>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn-primary rounded-pill float-end mt-2">Follow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

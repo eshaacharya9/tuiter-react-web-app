@@ -8,13 +8,22 @@
     margin-bottom: 20px;
 }
 .wd-tuit-options {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    right: -470px;
     color: #999;
     font-size: 14px;
     cursor: pointer;
     margin-top: 33px;
+    margin-right: 735px;
+  }
+  .wd-news1-tuit-options {
+    position: relative;
+    top: -19px;
+    right: -290px;
+    color:#999;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 89px;
     margin-right: 735px;
   }
 
@@ -45,27 +54,7 @@
     top: -17px;
     width: 16px;
   }
-  .wd-news1-tuit-options {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color:#999;
-    font-size: 12px;
-    cursor: pointer;
-    margin-top: 89px;
-    margin-right: 735px;
-  }
 
-  .wd-news2-tuit-options {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color:#999;
-    font-size: 12px;
-    cursor: pointer;
-    margin-top: 630px;
-    margin-right: 735px;
-  }
   .wd-specifics {
     color: rgb(159, 159, 159);
     position: relative;
@@ -76,6 +65,23 @@
     position: relative;
     top:-20px;
     left: 73px;
+  }
+
+  .wd-news2-tuit-options {
+    position: relative;
+    right: -290px;
+    top: 0;
+    right: 0;
+    color:#999;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 630px;
+    margin-right: 735px;
+  }
+
+  .tuit2 {
+    position: relative;
+    bottom: 580px;
   }
 
   .tuit {
@@ -125,6 +131,8 @@
     margin-top: 10px; /* Adjust spacing as needed */
     margin-left: 80px;
   }
+  
+
   
   .tuit-actions span {
     margin-right: 70px; /* Adjust spacing as needed */
