@@ -18,7 +18,7 @@
     padding: 5px 30px 5px 40px;
     color: darkgray;    
     background-color: #f5f5f5;
-    width: 500%;
+    width: 700%;
     border: none;
     outline: none;
 }
@@ -32,7 +32,7 @@
 }
 
 .wd-gear-icon {
-    margin-left: 400px;
+    margin-left: 540px;
     color: darkgray;
     cursor: pointer;
 }
