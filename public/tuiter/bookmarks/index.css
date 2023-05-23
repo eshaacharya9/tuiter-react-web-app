@@ -161,46 +161,55 @@
   .wd-tuit-actions .wd-comment-icon {
     color: grey;
     margin-right: -1px;
+    cursor: pointer;
   }
   .wd-tuit-actions .wd-comment-count {
     color: grey;
+    cursor: pointer;
   }
   
   .wd-tuit-actions .wd-retweet-icon {
     margin-right: -1px;
     color: grey;
+    cursor: pointer;
   }
   .wd-tuit-actions .wd-retweet-count {
     color: grey;
+    cursor: pointer;
   }
   
   .wd-tuit-actions .wd-like-icon {
     margin-right: -1px;
+    cursor: pointer;
     color: grey;
   }
   .wd-tuit-actions .wd-like-count {
-
+    cursor: pointer;
     color: grey;
   }
   
   .wd-tuit-actions .wd-stats-icon {
     margin-right: -1px;
     color: grey;
+    cursor: pointer;
   }
   .wd-tuit-actions .wd-stats-count {
     
 
     color: grey;
+    cursor: pointer;
   }
   
   .wd-tuit-actions .wd-stats-count {
     color: grey;
+    cursor: pointer;
   }
   .wd-tuit-actions .wd-share-icon {
     margin-right: -1px;
-
+    cursor: pointer;
     color: grey;
   }
   .wd-tuit-actions .wd-like-icon .fa-heart.liked {
     color: red;
+    cursor: pointer;
   }
