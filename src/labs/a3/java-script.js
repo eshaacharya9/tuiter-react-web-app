@@ -11,7 +11,7 @@ import Spread from "./spread";
 import Destructing from "./destructing";
 import FunctionDestructing from "./function-destructing";
 function JavaScript() {
-    // console.log('Hello World');
+    console.log('Hello World');
     return(
        <div>
           {/* <h1>JavaScript</h1> */}
