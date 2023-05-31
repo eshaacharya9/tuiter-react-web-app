@@ -31,6 +31,9 @@ const NavigationSidebar = () => {
           <span className="d-none d-xl-inline d-xxl-inline text-wrap">{link.text}</span>
         </Link>
       ))}
+                <button class="btn btn-primary w-100 mt-1 rounded-pill col-lg-5">
+                    Tuit
+                </button>
    </div>
  );
 };
