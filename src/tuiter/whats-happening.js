@@ -30,12 +30,12 @@ const WhatsHappening = () => {
       }
       const newWhatsHappening = [...whatsHappening,setWhatsHappening];
       dispatch(createTuit(newTuit));
-      setWhatsHappening("");
+      setWhatsHappening(""); 
    console.log(whatsHappening);
  }
  return (
    <div className="row">
-     <div className="col-auto">
+     <div className="col-auto col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
        <img src="/images/nasa.jpg" width={60}/>
      </div>
      <div className="col-10">

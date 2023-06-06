@@ -36,7 +36,7 @@ const tuitsSlice = createSlice({
       })
     },
 
-    updateLikes(state, action) {
+    likeButton(state, action) {
       console.log(action.payload);
       const tuit = state.find((tuit) => tuit._id === action.payload.tuitId);
       console.log(tuit);
@@ -46,5 +46,5 @@ const tuitsSlice = createSlice({
  
 });
 
-export const {createTuit,deleteTuit,updateLikes} = tuitsSlice.actions;
+export const {createTuit,deleteTuit,likeButton} = tuitsSlice.actions;
 export default tuitsSlice.reducer;

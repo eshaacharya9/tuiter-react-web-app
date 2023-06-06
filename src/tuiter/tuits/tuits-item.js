@@ -24,7 +24,7 @@ const deleteTuitHandler = (id) => {
     return(
      <li className="list-group-item">
       <div className="row">
-      <div className="col-2">
+      <div className="col-auto col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
           <img width={70} className="float-end rounded-circle" src={`/images/${tuit.image}`}/>
         </div>
         <div className="col-10">
@@ -35,7 +35,7 @@ const deleteTuitHandler = (id) => {
           className="text-secondary float-end"
           onClick={() => deleteTuitHandler(tuit._id)}
         />
-            <strong>{tuit.userName}</strong> <span class="fa fa-check-circle"></span> <AiFillCheckCircle style={{ color: 'blue'}} /> @ {tuit.topic} . {tuit.time}
+            <strong>{tuit.userName}</strong> <span class="fa fa-check-circle"></span> <AiFillCheckCircle style={{ color: 'blue'}} />  {tuit.handle} . {tuit.time}
           </div>
           <div>{tuit.tuit}</div>
         </div>

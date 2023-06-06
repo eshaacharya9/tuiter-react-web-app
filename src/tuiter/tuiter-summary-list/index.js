@@ -4,7 +4,8 @@ import TuitSummaryItem from "./tuiter-summary-item";
 
 
 const TuitSummaryList = () => {
-  const { tuits } = useSelector(state => state.tuits)
+  const tuits = useSelector(state => state.tuits);
+  console.log(tuits);
  return(
    <ul className="list-group">
      {
