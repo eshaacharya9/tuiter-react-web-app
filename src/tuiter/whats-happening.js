@@ -15,8 +15,20 @@ const WhatsHappening = () => {
  const dispatch = useDispatch();
  const tuitClickHandler = () => {
     const newTuit = {
-        tuit: whatsHappening
+        id: new Date().getTime(), 
+        topic: "NASA",   
+        userName: "NASA",
+        title: whatsHappening,
+        time: "0h",   
+        image: "nasa.jpg",
+        liked: false,
+        replies: 0,
+        retuits: 0,
+        likes: 0,
+        handle: "@nasa",
+        tuit: ""
       }
+      const newWhatsHappening = [...whatsHappening,setWhatsHappening];
       dispatch(createTuit(newTuit));
       setWhatsHappening("");
    console.log(whatsHappening);
@@ -37,14 +49,14 @@ const WhatsHappening = () => {
            Tuit
          </button>
          <div className="text-primary fs-2">
-            <AiOutlinePicture className="me-3" /> {/* Picture Icon */}
-            <MdGif className="me-3" /> {/* Gif Icon */}
-            <MdFormatListBulleted className="me-3" /> {/* List Bulleted Icon */}
-            <BsEmojiSmile className="me-3" /> {/* Emoji Smile Icon */}
-            <TbCalendarStats className="me-3" /> {/* Calendar Stats Icon */}
-            <HiOutlineLocationMarker className="me-3" /> {/* Location Marker Icon */}
-            <BiBold className="me-3" /> {/* Bold Icon */}
-            <BiItalic className="me-3" /> {/* Italic Icon */}
+            <AiOutlinePicture className="me-3" /> 
+            <MdGif className="me-3" /> 
+            <MdFormatListBulleted className="me-3" /> 
+            <BsEmojiSmile className="me-3" /> 
+            <TbCalendarStats className="me-3" /> 
+            <HiOutlineLocationMarker className="me-3" /> 
+            <BiBold className="me-3" /> 
+            <BiItalic className="me-3" /> 
          </div>
        </div>
      </div>

@@ -4,33 +4,32 @@ import tuits from './tuits.json';
 const currentUser = {
     "userName": "NASA",
     "handle": "@nasa",
-    "image": "nasa.png",
+    "image": "nasa.jpg",
    };
    
    const templateTuit = {
     ...currentUser,
     "topic": "Space",
-    "time": "2h",
+    "time": "0h",
     "liked": false,
     "replies": 0,
     "retuits": 0,
-    "likes": 0,
+    "likes": 0
    }
    
 
 const tuitsSlice = createSlice({
  name: 'tuits',
- initialState: { tuits: tuits },
+ initialState: tuits,
  reducers: {
     deleteTuit(state, action) {
-        const index = state.tuits
-           .findIndex(tuit =>
-              tuit._id === action.payload);
-        state.tuits.splice(index, 1);
+        const index = state.findIndex(tuits =>
+              tuits._id === action.payload);
+        state.splice(index, 1);
       },
    
     createTuit(state, action) {
-      state.tuits.unshift({
+      state.unshift({
         ...action.payload,
         ...templateTuit,
         _id: (new Date()).getTime(),

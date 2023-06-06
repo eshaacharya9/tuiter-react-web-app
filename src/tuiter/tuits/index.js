@@ -4,7 +4,7 @@ import TuitsItem from "./tuits-item";
 import TuitsStat from "./tuits-stat";
 
 const TuitList = () => {
-  const { tuits } = useSelector(state => state.tuits)
+  const tuits  = useSelector(state => state.tuits)
 
 
 
@@ -12,12 +12,8 @@ const TuitList = () => {
    <ul className="list-group">
      {
        tuits.map(tuit =>
-        <div>
          <TuitsItem
-           key={tuit._id} tuit={tuit}/> 
-         <TuitsStat
-                      key={tuits._id} tuit={tuit}/>
-          </div> )
+           key={tuit._id} tuit={tuit}/> )
            
      }
    </ul>

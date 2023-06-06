@@ -17,6 +17,7 @@ const TuitsStat = (
     const [likes, setLikes] = useState(tuit.likes);
   
     const handleLikeClick = () => {
+    
       if (liked) {
         setLikes(likes - 1);
       } else {
@@ -31,12 +32,12 @@ const TuitsStat = (
                 <FaRetweet className="text-secondary ms-5" /><span className="text-secondary text-decoration-none me-5"> {tuit.retuits}</span>
 
                 {tuit.liked ? (
-                    <FaHeart className="ms-5 text-danger" />
+                    <FaHeart onClick={handleLikeClick} className="ms-5 text-danger" />
                         ) : (
-                    <FaHeart className="ms-5 text-secondary" />
+                    <FaHeart onClick={handleLikeClick} className="ms-5 text-secondary" />
                 )}
 
-                <span className="text-secondary text-decoration-none me-5"> {tuit.likes}</span>
+                <span className="text-secondary text-decoration-none me-5"> {likes}</span>
                 <FaUpload className="text-secondary ms-5" />
             </div>
         </>
