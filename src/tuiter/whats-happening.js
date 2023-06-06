@@ -49,14 +49,14 @@ const WhatsHappening = () => {
            Tuit
          </button>
          <div className="text-primary fs-2">
-            <AiOutlinePicture className="me-3" /> 
-            <MdGif className="me-3" /> 
-            <MdFormatListBulleted className="me-3" /> 
-            <BsEmojiSmile className="me-3" /> 
-            <TbCalendarStats className="me-3" /> 
-            <HiOutlineLocationMarker className="me-3" /> 
-            <BiBold className="me-3" /> 
-            <BiItalic className="me-3" /> 
+            <AiOutlinePicture className="me-4" /> 
+            <MdGif className="me-4" /> 
+            <MdFormatListBulleted className="me-4" /> 
+            <BsEmojiSmile className="me-4" /> 
+            <TbCalendarStats className="me-4" /> 
+            <HiOutlineLocationMarker className="me-4" /> 
+            <BiBold className="me-4" /> 
+            <BiItalic className="me-4" /> 
          </div>
        </div>
      </div>

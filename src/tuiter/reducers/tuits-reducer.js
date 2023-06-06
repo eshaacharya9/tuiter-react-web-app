@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import tuits from './tuits.json';
 
+
+
 const currentUser = {
     "userName": "NASA",
     "handle": "@nasa",
