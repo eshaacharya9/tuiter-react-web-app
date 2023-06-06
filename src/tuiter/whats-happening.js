@@ -7,10 +7,18 @@ import { TbCalendarStats } from 'react-icons/tb';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { BiBold } from 'react-icons/bi';
 import { BiItalic } from 'react-icons/bi';
+import {createTuit} from "./reducers/tuits-reducer";
+import {useDispatch} from "react-redux";
 
 const WhatsHappening = () => {
  let [whatsHappening, setWhatsHappening] = useState('');
+ const dispatch = useDispatch();
  const tuitClickHandler = () => {
+    const newTuit = {
+        tuit: whatsHappening
+      }
+      dispatch(createTuit(newTuit));
+      setWhatsHappening("");
    console.log(whatsHappening);
  }
  return (
@@ -29,14 +37,14 @@ const WhatsHappening = () => {
            Tuit
          </button>
          <div className="text-primary fs-2">
-         <AiOutlinePicture className="me-3" /> {/* Picture Icon */}
-         <MdGif className="me-3" /> {/* Gif Icon */}
-  <MdFormatListBulleted className="me-3" /> {/* List Bulleted Icon */}
-  <BsEmojiSmile className="me-3" /> {/* Emoji Smile Icon */}
-  <TbCalendarStats className="me-3" /> {/* Calendar Stats Icon */}
-  <HiOutlineLocationMarker className="me-3" /> {/* Location Marker Icon */}
-  <BiBold className="me-3" /> {/* Bold Icon */}
-  <BiItalic className="me-3" /> {/* Italic Icon */}
+            <AiOutlinePicture className="me-3" /> {/* Picture Icon */}
+            <MdGif className="me-3" /> {/* Gif Icon */}
+            <MdFormatListBulleted className="me-3" /> {/* List Bulleted Icon */}
+            <BsEmojiSmile className="me-3" /> {/* Emoji Smile Icon */}
+            <TbCalendarStats className="me-3" /> {/* Calendar Stats Icon */}
+            <HiOutlineLocationMarker className="me-3" /> {/* Location Marker Icon */}
+            <BiBold className="me-3" /> {/* Bold Icon */}
+            <BiItalic className="me-3" /> {/* Italic Icon */}
          </div>
        </div>
      </div>

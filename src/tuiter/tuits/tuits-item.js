@@ -1,4 +1,9 @@
 import React from "react";
+import {useDispatch} from "react-redux";
+import {deleteTuit} from "../reducers/tuits-reducer";
+import {FaTimesCircle} from "react-icons/fa";
+
+
 const TuitsItem = (
     {
       tuit = {
@@ -11,6 +16,10 @@ const TuitsItem = (
       }
     }
    ) => {
+    const dispatch = useDispatch();
+const deleteTuitHandler = (id) => {
+  dispatch(deleteTuit(id));
+}
     return(
      <li className="list-group-item">
       <div className="row">
@@ -19,6 +28,11 @@ const TuitsItem = (
         </div>
         <div className="col-10">
           <div>
+          
+            <FaTimesCircle
+          className="text-secondary float-end"
+          onClick={() => deleteTuitHandler(tuit._id)}
+        />
             <strong>{tuit.userName}</strong> <span class="fa fa-check-circle"></span> {tuit.topic} {tuit.time}
           </div>
           <div>{tuit.title}</div>
