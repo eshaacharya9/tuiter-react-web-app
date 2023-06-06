@@ -26,7 +26,7 @@ const WhatsHappening = () => {
         retuits: 0,
         likes: 0,
         handle: "@nasa",
-        tuit: ""
+        tuit: whatsHappening
       }
       const newWhatsHappening = [...whatsHappening,setWhatsHappening];
       dispatch(createTuit(newTuit));
