@@ -2,6 +2,7 @@ import React from "react";
 import {useDispatch} from "react-redux";
 import {deleteTuit} from "../reducers/tuits-reducer";
 import {FaTimesCircle} from "react-icons/fa";
+import { AiFillCheckCircle } from 'react-icons/ai';
 import TuitsStat from "./tuits-stat";
 
 const TuitsItem = (
@@ -34,13 +35,19 @@ const deleteTuitHandler = (id) => {
           className="text-secondary float-end"
           onClick={() => deleteTuitHandler(tuit._id)}
         />
-            <strong>{tuit.userName}</strong> <span class="fa fa-check-circle"></span> @ {tuit.topic} . {tuit.time}
+            <strong>{tuit.userName}</strong> <span class="fa fa-check-circle"></span> <AiFillCheckCircle style={{ color: 'blue'}} /> @ {tuit.topic} . {tuit.time}
           </div>
           <div>{tuit.tuit}</div>
         </div>
         
-        <TuitsStat
-           key={tuit._id} tuit={tuit}/>  
+        {/* <TuitsStat
+           key={tuit._id} tuit={tuit}/>   */}
+           <TuitsStat
+                        liked={tuit.liked}
+                        replies={tuit.replies}
+                        retuits={tuit.retuits}
+                        likes={tuit.likes}
+                        index={tuit._id}/>
       </div>
      </li>
     );
