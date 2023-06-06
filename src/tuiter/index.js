@@ -1,16 +1,23 @@
 import { Routes, Route } from "react-router";
 import Nav from "../nav";
 import NavigationSidebar from "./navigation-sidebar";
-import HomeScreen from "./home-screen";
 import BookmarksScreen from "./bookmarks-screen";
 import ProfileScreen from "./profile-screen";
 import WhoToFollowList from "./who-to-follow-list";
 import ExploreScreen from "./explore-screen/";
+import whoReducer from "./reducers/who-reducer";
+import HomeScreen from "./home-screen";
+import { configureStore } from '@reduxjs/toolkit';
+import tuitsReducer from "./reducers/tuits-reducer";
+import {Provider} from "react-redux";
+const store = configureStore(
+  {reducer: {who: whoReducer , tuits: tuitsReducer}});
 
 
 
 function Tuiter() {
  return (
+  <Provider store={store}>
    <div>
      <Nav />
      <div className="row">
@@ -31,6 +38,7 @@ function Tuiter() {
        </div>
      </div>
    </div>
+   </Provider>
  );
 }
 export default Tuiter;
