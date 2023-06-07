@@ -21,7 +21,7 @@ function Tuiter() {
    <div>
      <Nav />
      <div className="row">
-       <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+       <div className="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
          <NavigationSidebar />
        </div>
        <div className="col-6 col-sm-8 col-md-10 col-lg-6 col-xl-6 col-xxl-6">
