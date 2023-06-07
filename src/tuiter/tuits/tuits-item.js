@@ -37,7 +37,7 @@ const deleteTuitHandler = (id) => {
             {tuit.tuit}
           </div>
         </div>
-        <div className="col-12 col-sm-10 col-md-10 col-lg-11 col-xl-10 col-xxl-10">
+        <div>
         <TuitsStat index={tuit._id}
                    liked={tuit.liked}
                    replies={tuit.replies}
@@ -48,5 +48,5 @@ const deleteTuitHandler = (id) => {
      </li>
     );
    };
-   
+
    export default TuitsItem;
