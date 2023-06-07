@@ -38,7 +38,7 @@ const WhatsHappening = () => {
      <div className="col-auto col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
        <img src="/images/nasa.jpg" width={80}/>
      </div>
-     <div className="col-10">
+     <div className="col-10 ms-auto">
        <textarea value={whatsHappening} placeholder="What's happening?"
                className="form-control border-0"
                onChange={(event) => setWhatsHappening(event.target.value)}>
