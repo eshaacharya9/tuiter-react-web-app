@@ -17,7 +17,7 @@ const NavigationSidebar = () => {
 ];
 
  return (
-   <div className="list-group">
+   <div className="list-group ">
     <div class="fa-1x text-black list-group-item list-group-item-action"><FaTwitter /></div>
      {links.map((link) => (
           <Link
@@ -28,7 +28,7 @@ const NavigationSidebar = () => {
           }`}
         >
           <div className="me-2">{link.icon}</div>
-          <span className="d-none d-xl-inline d-xxl-inline text-wrap">{link.text}</span>
+          <span className="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline text-wrap">{link.text}</span>
         </Link>
       ))}
                 <button class="btn btn-primary w-100 mt-1 rounded-pill col-lg-5">
