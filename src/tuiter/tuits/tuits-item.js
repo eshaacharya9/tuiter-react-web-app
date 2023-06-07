@@ -23,31 +23,27 @@ const deleteTuitHandler = (id) => {
 }
     return(
      <li className="list-group-item">
-      <div className="row">
-      <div className="col-auto col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
-          <img width={70} className="float-end rounded-circle" src={`/images/${tuit.image}`}/>
+      <div className="row align-items-center">
+        <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+          <img width={70} className="float-end rounded-circle" src={`/images/${tuit.image}`} alt="User Avatar"/>
         </div>
         <div className="col-10">
-
           <div>
-          
-            <FaTimesCircle
-          className="text-secondary float-end"
-          onClick={() => deleteTuitHandler(tuit._id)}
-        />
+            <FaTimesCircle className="text-secondary float-end"
+              onClick={() => deleteTuitHandler(tuit._id)} />
             <strong>{tuit.userName}</strong> <span class="fa fa-check-circle"></span> <AiFillCheckCircle style={{ color: 'blue'}} />  {tuit.handle} . {tuit.time}
           </div>
-          <div>{tuit.tuit}</div>
+          <div className="text-wrap">
+            {tuit.tuit}
+          </div>
         </div>
-        
-        {/* <TuitsStat
-           key={tuit._id} tuit={tuit}/>   */}
-           <TuitsStat
-                        liked={tuit.liked}
-                        replies={tuit.replies}
-                        retuits={tuit.retuits}
-                        likes={tuit.likes}
-                        index={tuit._id}/>
+        <div className="col-12 text-wrap">
+        <TuitsStat index={tuit._id}
+                   liked={tuit.liked}
+                   replies={tuit.replies}
+                   retuits={tuit.retuits}
+                   likes={tuit.likes}/>
+                   </div>
       </div>
      </li>
     );
