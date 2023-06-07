@@ -25,7 +25,7 @@ const deleteTuitHandler = (id) => {
      <li className="list-group-item">
       <div className="row align-items-center">
         <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
-          <img width={70} className="float-end rounded-circle" src={`/images/${tuit.image}`} alt="User Avatar"/>
+          <img width={70} className="float-end rounded-circle" src={`/images/${tuit.image}`}/>
         </div>
         <div className="col-9 col-sm-10 col-md-10 col-lg-11 col-xl-10 col-xxl-10">
           <div>
@@ -48,4 +48,5 @@ const deleteTuitHandler = (id) => {
      </li>
     );
    };
+   
    export default TuitsItem;
