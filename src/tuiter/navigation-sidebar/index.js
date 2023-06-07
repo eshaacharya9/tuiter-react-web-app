@@ -17,13 +17,18 @@ const NavigationSidebar = () => {
 ];
 
  return (
-   <div className="list-group ">
-    <div class="fa-1x text-black list-group-item list-group-item-action"><FaTwitter /></div>
+  <div className="container pt-1">
+  <div className="row">
+    <div>
+      <div className="list-group">
+        <div className="fa-1x text-black list-group-item list-group-item-action">
+          <FaTwitter />
+        </div>
      {links.map((link) => (
           <Link
           key={link.name}
           to={`/tuiter/${link.name}`}
-          className={`list-group-item d-flex align-items-center text-capitalize ${
+          className={`list-group-item d-flex align-items-center text-capitalize  ${
             active === link.name ? "active" : ""
           }`}
         >
@@ -31,10 +36,14 @@ const NavigationSidebar = () => {
           <span className="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline text-wrap">{link.text}</span>
         </Link>
       ))}
-                <button class="btn btn-primary w-100 mt-1 rounded-pill col-lg-5">
+      </div>
+                <button className="btn btn-primary w-100 mt-1 rounded-pill col-lg-5">
                     Tuit
                 </button>
-   </div>
+                </div>
+        {/* Fist column done */}
+      </div>
+    </div>
  );
 };
 export default NavigationSidebar;

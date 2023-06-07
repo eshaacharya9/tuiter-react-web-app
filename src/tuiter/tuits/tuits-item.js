@@ -27,17 +27,17 @@ const deleteTuitHandler = (id) => {
         <div className="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
           <img width={70} className="float-end rounded-circle" src={`/images/${tuit.image}`} alt="User Avatar"/>
         </div>
-        <div className="col-10">
+        <div className="col-9 col-sm-10 col-md-10 col-lg-11 col-xl-10 col-xxl-10">
           <div>
             <FaTimesCircle className="text-secondary float-end"
               onClick={() => deleteTuitHandler(tuit._id)} />
             <strong>{tuit.userName}</strong> <span class="fa fa-check-circle"></span> <AiFillCheckCircle style={{ color: 'blue'}} />  {tuit.handle} . {tuit.time}
           </div>
-          <div className="text-wrap">
+          <div className="text-wrap text-black mb-1">
             {tuit.tuit}
           </div>
         </div>
-        <div className="col-12 text-wrap">
+        <div className="col-12 col-sm-10 col-md-10 col-lg-11 col-xl-10 col-xxl-10">
         <TuitsStat index={tuit._id}
                    liked={tuit.liked}
                    replies={tuit.replies}

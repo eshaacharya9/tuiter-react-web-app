@@ -7,9 +7,9 @@ function ExploreScreen() {
  return(
    <>
      <div className="row">
-       <div className="col-11 position-relative col-10 col-sm-3 col-md-6 col-lg-8 col-xl-10 col-xxl-10">
+       <div className="position-relative col-10 col-sm-3 col-md-6 col-lg-8 col-xl-10 col-xxl-10">
          <input placeholder="Search Tuiter" className="form-control rounded-pill ps-5"/>
-         <AiOutlineSearch className="fs-4 position-absolute wd-nudge-up m-sm-1 m-lg-3 m-xl-3 m-xxl-3"/>
+         <AiOutlineSearch className="fs-4 position-absolute wd-nudge-up m-sm-3 m-lg-3 m-xl-3 m-xxl-3"/>
        </div>
        <div className="col-1">
          <GoGear className="wd-top-4 float-end fs-3 position-relative"/>

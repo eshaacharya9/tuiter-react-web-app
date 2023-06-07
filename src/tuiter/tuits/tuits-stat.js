@@ -18,16 +18,16 @@ const TuitsStat = ( tuit ) => {
     };
     return (
         <>
-            <div className="mt-3 mb-3" style={{ marginLeft: '130px' }}>
-                <FaComment className="text-secondary" /><span className="text-secondary me-5"> {tuit.replies}</span>
-                <FaRetweet className="text-secondary ms-5" /><span className="text-secondary text-decoration-none me-5"> {tuit.retuits}</span>
+            <div className="mt-2 mb-2" style={{ marginLeft: '130px' }}>
+                <FaComment className="text-secondary" /><span className="text-secondary me-5 d-none d-md-inline"> {tuit.replies}</span>
+                <FaRetweet className="text-secondary ms-sm-2 ms-md-4 ms-lg-5" /><span className="text-secondary text-decoration-none me-5 d-none d-md-inline"> {tuit.retuits}</span>
                
                 <span style={{"cursor": "pointer"}} 
                  onClick={() => handleLikeClick(tuit.liked)}>
                     <FaHeart className={likes.tuitLiked ? "wd-red-like" : "wd-no-like"} />
                 </span> 
-                <span className="text-secondary text-decoration-none me-5"> {likes.tuitLikes}</span>
-                <FaUpload className="text-secondary ms-5" />
+                <span className="text-secondary text-decoration-none me-5 d-none d-md-inline"> {likes.tuitLikes}</span>
+                <FaUpload className="text-secondary me-sm-1 me-md-1 me-lg-6" />
             </div>
         </>
 
