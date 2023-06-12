@@ -1,33 +1,72 @@
 import React, { useState } from "react";
-import { FaComment, FaRetweet, FaHeart, FaUpload } from 'react-icons/fa';
+import { FaComment, FaRetweet, FaHeart, FaUpload, FaThumbsDown} from 'react-icons/fa';
 import './index.css';
 import {useDispatch} from "react-redux";
-import { likeButton } from "../reducers/tuits-reducer";
+import { likeButton, dislikeButton } from "../reducers/tuits-reducer";
+import { updateTuitThunk } from "../services/tuits-thunks";
 
-const TuitsStat = ( tuit ) => {
-    const [likes, setLikes] = useState({tuitId: tuit.index, tuitLikes: tuit.likes, tuitLiked: tuit.liked})
-    
+const TuitsStat = ( {tuit} ) => {
+   
     const dispatch = useDispatch();
-    const handleLikeClick = (id) => {
-        if(likes.tuitLiked) {
-            setLikes({...likes, tuitLikes: likes.tuitLikes - 1, tuitLiked: false});
-        } else {
-            setLikes({...likes, tuitLikes: likes.tuitLikes + 1, tuitLiked: true});
+    
+    const handleLikeClick = () => {
+        if(!tuit.liked) {
+            dispatch(updateTuitThunk({
+                ...tuit,
+                liked: true,
+                likes: tuit.likes + 1
+            }));
         }
-        dispatch(likeButton(likes));
+        else {
+                dispatch(updateTuitThunk({
+                    ...tuit,
+                    liked: false,
+                    likes: tuit.likes - 1
+                }));
+            
+        }  
     };
+    const handleDislikeClick = () => {
+        if(!tuit.disliked) {
+            dispatch(updateTuitThunk({
+                ...tuit,
+                disliked: true,
+                dislikes: tuit.dislikes + 1
+            }));
+        }
+        else {
+                dispatch(updateTuitThunk({
+                    ...tuit,
+                    disliked: false,
+                    dislikes: tuit.dislikes - 1
+                }));
+            
+        }  
+    };
+
     return (
         <>
             <div className="mt-2 mb-2" style={{ marginLeft: '130px' }}>
+                
                 <FaComment className="text-secondary" /><span className="text-secondary me-5 d-none d-md-inline"> {tuit.replies}</span>
-                <FaRetweet className="text-secondary ms-sm-2 ms-md-4 ms-lg-5" /><span className="text-secondary text-decoration-none me-5 d-none d-md-inline"> {tuit.retuits}</span>
+                
+                <FaRetweet className="text-secondary" /><span className="text-secondary text-decoration-none me-5 d-none d-md-inline"> {tuit.retuits}</span>
                
                 <span style={{"cursor": "pointer"}} 
-                 onClick={() => handleLikeClick(tuit.liked)}>
-                    <FaHeart className={likes.tuitLiked ? "wd-red-like" : "wd-no-like"} />
+                 onClick={handleLikeClick}>
+                    <FaHeart className={tuit.liked ? "wd-red-like" : "wd-no-like"} />
                 </span> 
-                <span className="text-secondary text-decoration-none me-5 d-none d-md-inline"> {likes.tuitLikes}</span>
-                <FaUpload className="text-secondary me-sm-1 me-md-1 me-lg-6" />
+                
+                <span className="text-secondary text-decoration-none me-5 d-none d-md-inline"> {tuit.likes}</span>
+                
+                <span style={{"cursor": "pointer"}} 
+                 onClick={handleDislikeClick}>
+                    <FaThumbsDown className={tuit.disliked ? "wd-blue-thumb" : "wd-nocolor-thumb"}/> 
+                </span>
+
+                <span className="text-secondary text-decoration-none me-5 d-none d-md-inline"> {tuit.dislikes}</span>
+
+                <FaUpload className="text-secondary" />
             </div>
         </>
 

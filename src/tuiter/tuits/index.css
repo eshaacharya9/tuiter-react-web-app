@@ -5,3 +5,11 @@
 .wd-no-like {
     fill: grey;
 }
+
+.wd-blue-thumb {
+    fill: blue
+}
+
+.wd-nocolor-thumb {
+    fill: grey;
+}

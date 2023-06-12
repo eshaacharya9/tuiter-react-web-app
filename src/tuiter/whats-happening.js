@@ -7,7 +7,7 @@ import { TbCalendarStats } from 'react-icons/tb';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { BiBold } from 'react-icons/bi';
 import { BiItalic } from 'react-icons/bi';
-import {createTuit} from "./reducers/tuits-reducer";
+import {createTuitThunk} from "./services/tuits-thunks";
 import {useDispatch} from "react-redux";
 
 const WhatsHappening = () => {
@@ -22,14 +22,16 @@ const WhatsHappening = () => {
         time: "0h",   
         image: "nasa.jpg",
         liked: false,
+        disliked:false,
+        dislikes:0,
         replies: 0,
         retuits: 0,
         likes: 0,
         handle: "@nasa",
         tuit: whatsHappening
       }
-      const newWhatsHappening = [...whatsHappening,setWhatsHappening];
-      dispatch(createTuit(newTuit));
+     // const newWhatsHappening = [...whatsHappening,setWhatsHappening];
+      dispatch(createTuitThunk(newTuit));
       setWhatsHappening(""); 
    console.log(whatsHappening);
  }
