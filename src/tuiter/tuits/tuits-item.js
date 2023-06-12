@@ -32,7 +32,7 @@ const deleteTuitHandler = (id) => {
           <div>
             <FaTimesCircle className="text-secondary float-end"
               onClick={() => deleteTuitHandler(tuit._id)} />
-            <strong>{tuit.username}</strong> <span class="fa fa-check-circle"></span> <AiFillCheckCircle style={{ color: 'blue'}} />  {tuit.handle} . {tuit.time}
+            <strong>{tuit.username}</strong> <span className="fa fa-check-circle"></span> <AiFillCheckCircle style={{ color: 'blue'}} />  {tuit.handle} . {tuit.time}
           </div>
           <div className="text-wrap text-black mb-1">
             {tuit.tuit}

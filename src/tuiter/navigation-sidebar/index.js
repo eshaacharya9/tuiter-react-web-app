@@ -72,9 +72,6 @@ const NavigationSidebar = () => {
         
       </Link>}
 
-
-
-
       </div>
                 <button className="btn btn-primary w-100 mt-1 rounded-pill col-lg-5">
                     Tuit

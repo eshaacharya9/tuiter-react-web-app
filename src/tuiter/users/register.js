@@ -17,7 +17,7 @@ function RegisterScreen() {
  };
  return ( 
     <div>
-   <h1>Login Screen</h1>
+   <h1>Register Screen</h1>
    <div className="mt-2">
     <label>Username</label>
     <input placeholder="Username" className="form-control" type="text" value={username}

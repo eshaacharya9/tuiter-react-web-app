@@ -46,9 +46,9 @@ function ProfileScreen() {
      onClick={() => {
        dispatch(logoutThunk());
        navigate("/tuiter/login");
-     }}>                   Logout</button>
-    <button onClick={save}>Save  </button>
-    <pre>{JSON.stringify(currentUser,null,2)}</pre>
+     }}>Logout</button>
+    <button onClick={save}>Save</button>
+    {/* <pre>{JSON.stringify(currentUser,null,2)}</pre> */}
    </div> );
 }
 export default ProfileScreen;
