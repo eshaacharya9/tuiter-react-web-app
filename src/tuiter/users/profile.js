@@ -22,6 +22,7 @@ function ProfileScreen() {
     <h1>Profile Screen</h1>
     {profile && (<div>
       <div>
+        console.log("hello");
        <label>First Name</label>
        <input type="text" value={profile.firstName}
         onChange={(event) => {
@@ -43,11 +44,14 @@ function ProfileScreen() {
       </div></div>
     )}
     <button
+    className="btn btn-danger"
      onClick={() => {
        dispatch(logoutThunk());
        navigate("/tuiter/login");
      }}>Logout</button>
-    <button onClick={save}>Save</button>
+    <button 
+    className="btn btn-success"
+    onClick={save}>Save</button>
     {/* <pre>{JSON.stringify(currentUser,null,2)}</pre> */}
    </div> );
 }
