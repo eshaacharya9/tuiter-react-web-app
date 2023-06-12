@@ -41,9 +41,9 @@ function Tuiter() {
           <Route path="/register" element={<RegisterScreen />} /> 
 
          <Route path="/profile" element={
-          <ProtectedRoute>
+         // <ProtectedRoute>
             <ProfileScreen />
-            </ProtectedRoute>
+         //   </ProtectedRoute>
          } />
       </Routes>
 

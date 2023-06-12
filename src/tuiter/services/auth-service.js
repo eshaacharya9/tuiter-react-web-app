@@ -25,5 +25,6 @@ export const logout = async () => {
    };
    export const register = async ({ username, password }) => {
     const response = await api.post(`${USERS_URL}/register`, { username, password });
+    console.log(response.data);
   return response.data;
     }

@@ -7,22 +7,23 @@ function ProfileScreen() {
  const [profile, setProfile] = useState(currentUser);
  const dispatch = useDispatch();
  const navigate = useNavigate();
- const save = () => { dispatch(updateUserThunk(profile)); };
+ const save = async () => { dispatch(updateUserThunk(profile)); };
  useEffect(() => {
-    const fetchProfile = async() => {
-        const { payload } = dispatch(profileThunk());
-        setProfile(payload);
-    }
-    fetchProfile();
-    return() => {
+  const loadProfile = async() => {
+      const { payload } = dispatch(profileThunk());
+      setProfile(payload);
+  }
+  loadProfile();
+  return() => {
 
-    };
+  };
 },[]);
+
  return ( <div>
     <h1>Profile Screen</h1>
+    
     {profile && (<div>
       <div>
-        console.log("hello");
        <label>First Name</label>
        <input type="text" value={profile.firstName}
         onChange={(event) => {

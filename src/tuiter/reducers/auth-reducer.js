@@ -3,7 +3,7 @@ import { loginThunk, logoutThunk, profileThunk, updateUserThunk, registerThunk }
 
 
 const authSlice = createSlice({
- name: "users",
+ name: "auth",
  initialState: { 
   error:null,
   loading:false,
