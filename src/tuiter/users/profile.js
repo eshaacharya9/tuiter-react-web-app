@@ -70,7 +70,7 @@ function ProfileScreen() {
             </div>
         ) :
             <div>
-                <h6>Enter accurate information. Please try again.</h6>
+                <h6>Register and enter accurate information. Please try again.</h6>
             </div>
         }
     </div>);
