@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FaComment, FaRetweet, FaHeart, FaUpload, FaThumbsDown} from 'react-icons/fa';
 import './index.css';
 import {useDispatch} from "react-redux";
-import { likeButton, dislikeButton } from "../reducers/tuits-reducer";
 import { updateTuitThunk } from "../services/tuits-thunks";
 
 const TuitsStat = ( {tuit} ) => {
