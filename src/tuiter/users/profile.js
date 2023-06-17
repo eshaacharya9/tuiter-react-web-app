@@ -9,20 +9,23 @@ function ProfileScreen() {
     
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
+    console.log(profile);
     const save = () => {
         dispatch(updateUserThunk(profile));
     };
     useEffect(() => {
         async function fetchData() {
+            console.log("inside fetchData");
             const { payload } = await dispatch(profileThunk());
-            console.log(payload);
+
+            console.log("printing payload",payload);
             setProfile(payload);
         }
         fetchData();
     }, []);
     return (<div>
         <h1>Profile</h1><br />
+        
         {profile ? (
             <div className="container">
                 <div className="row mt-3">

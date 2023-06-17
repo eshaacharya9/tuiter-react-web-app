@@ -13,6 +13,7 @@ const authSlice = createSlice({
   extraReducers: {
     [loginThunk.fulfilled]: (state, { payload }) => {
       state.currentUser = payload;
+      console.log("inside auth reducer", state.currentUser);
       state.loading = false;
       state.error = null;
     },
