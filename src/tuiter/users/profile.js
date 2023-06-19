@@ -4,28 +4,27 @@ import { useNavigate } from "react-router";
 import { profileThunk, logoutThunk, updateUserThunk } from "../services/auth-thunks";
 
 function ProfileScreen() {
-    const { currentUser } = useSelector((state) => state.user);
-    const [profile, setProfile] = useState(currentUser);
-    
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
-    console.log(profile);
-    const save = () => {
-        dispatch(updateUserThunk(profile));
-    };
-    useEffect(() => {
-        async function fetchData() {
-            console.log("inside fetchData");
-            const { payload } = await dispatch(profileThunk());
+ const { currentUser } = useSelector((state) => state.user);
+ const [profile, setProfile] = useState(currentUser);
 
-            console.log("printing payload",payload);
-            setProfile(payload);
-        }
-        fetchData();
-    }, []);
-    return (<div>
-        <h1>Profile</h1><br />
-        
+ const dispatch = useDispatch();
+ const navigate = useNavigate();
+
+ const save = () => { 
+    dispatch(updateUserThunk(profile));
+};
+ useEffect(() => {
+    async function fetchData() {
+        const {payload} = await dispatch(profileThunk());
+        console.log(payload);
+        setProfile(payload);
+    }
+    fetchData();
+ },[]);
+ 
+ return (
+    <div>
+        <h1>Profile</h1><br/>
         {profile ? (
             <div className="container">
                 <div className="row mt-3">
@@ -38,7 +37,7 @@ function ProfileScreen() {
                                 ...profile, firstName: event.target.value,
                             };
                             setProfile(newProfile);
-                        }} />
+                        }}/>
                     </div>
                 </div>
                 <div className="row mt-3">
@@ -51,30 +50,32 @@ function ProfileScreen() {
                                 ...profile, lastName: event.target.value,
                             };
                             setProfile(newProfile);
-                        }} />
+                        }}/>
                     </div>
                 </div>
                 <div className="row mt-3">
-                    <div className="col">
-                        <button className="btn btn-primary" onClick={() => {
-                            dispatch(logoutThunk());
-                            navigate("/tuiter/login");
-                        }}>
-                            Logout
-                        </button>
-                    </div>
+                <div className="col">
+                    <button className="btn btn-primary" onClick={() => {
+                        dispatch(logoutThunk());
+                        navigate("/tuiter/login");
+                    }}>                   
+                        Logout
+                    </button>
+                </div>
                 </div>
                 <div className="row mt-3">
                     <div className="col">
                         <button className="btn btn-success" onClick={save}>Save</button>
                     </div>
-                </div>
+                </div>    
             </div>
-        ) :
+            ) :
             <div>
-                <h6>Register and enter accurate information. Please try again.</h6>
+                <h6>Please Login or Register first with valid information to view the profile details.</h6>
             </div>
-        }
-    </div>);
+        }       
+    </div> 
+ );  
 }
+
 export default ProfileScreen;
