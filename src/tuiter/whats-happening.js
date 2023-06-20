@@ -12,17 +12,17 @@ import { useDispatch, useSelector } from "react-redux";
 
 const WhatsHappening = () => {
   let [whatsHappening, setWhatsHappening] = useState('');
-    const { currentUser } = useSelector((state) => state.user);
-    const dispatch = useDispatch();
-    const tuitClickHandler = () => {
-        const newTuit = {
-            tuit: whatsHappening,
-            username: currentUser.username,
-            handle: currentUser.handle,
-            image: currentUser.image
-        }
-        dispatch(createTuitThunk(newTuit));
-        setWhatsHappening("");
+  const { currentUser } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const tuitClickHandler = () => {
+    const newTuit = {
+      tuit: whatsHappening,
+      username: currentUser.username,
+      handle: currentUser.handle,
+      image: currentUser.image
+    }
+    dispatch(createTuitThunk(newTuit));
+    setWhatsHappening("");
   }
   return (
     <div className="row">
@@ -64,16 +64,16 @@ const WhatsHappening = () => {
               className="form-control border-0">
             </textarea>
             <div>
-              <p className="float-end mt-2 ps-3 pe-3 fw-bold">Login to post a tuit.</p>
+              <p className="float-end mt-2 ps-3 pe-3 fw-bold">Please Login to tuit.</p>
               <div className="text-primary fs-2">
-                <AiOutlinePicture className="me-3" />
-                <MdGif className="me-3" />
-                <MdFormatListBulleted className="me-3" />
-                <BsEmojiSmile className="me-3" />
-                <TbCalendarStats className="me-3" />
-                <HiOutlineLocationMarker className="me-3" />
-                <BiBold className="me-3" />
-                <BiItalic className="me-3" />
+                <AiOutlinePicture className="me-2" />
+                <MdGif className="me-2" />
+                <MdFormatListBulleted className="me-2" />
+                <BsEmojiSmile className="me-2" />
+                <TbCalendarStats className="me-2" />
+                <HiOutlineLocationMarker className="me-2" />
+                <BiBold className="me-2" />
+                <BiItalic className="me-2" />
               </div>
             </div>
             <div className="col-12"><hr /></div>
