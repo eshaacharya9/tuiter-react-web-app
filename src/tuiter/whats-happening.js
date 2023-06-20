@@ -19,7 +19,7 @@ const WhatsHappening = () => {
       tuit: whatsHappening,
       username: currentUser.username,
       handle: currentUser.handle,
-      image: currentUser.image
+      image: "profile.jpg"
     }
     dispatch(createTuitThunk(newTuit));
     setWhatsHappening("");
@@ -29,7 +29,7 @@ const WhatsHappening = () => {
       {currentUser ?
         <>
           <div className="col-auto">
-            <img className="rounded-circle" src={`/images/${currentUser.image}`} width={60} />
+            <img className="rounded-circle" src="profile.jpg" width={30} />
           </div>
           <div className="col-10">
             <textarea value={whatsHappening} placeholder="What's happening?"
